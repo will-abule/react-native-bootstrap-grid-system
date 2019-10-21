@@ -4,9 +4,11 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-import EStyleSheet from "react-native-extended-stylesheet";
+import { StyleSheet, Dimensions } from "react-native";
 
-const styles = EStyleSheet.create({
+let screenWidth = Dimensions.get("window").width;
+
+const styles = StyleSheet.create({
   container: {
     width: "100%",
     paddingRight: 15,
@@ -15,29 +17,29 @@ const styles = EStyleSheet.create({
     marginLeft: "auto"
   },
 
-  "@media (min-width: 576)": {
+  ...(screenWidth >= 576 && {
     container: {
       maxWidth: 540
     }
-  },
+  }),
 
-  "@media (min-width: 768)": {
+  ...(screenWidth >= 768 && {
     container: {
       maxWidth: 720
     }
-  },
+  }),
 
-  "@media (min-width: 992)": {
+  ...(screenWidth >= 992 && {
     container: {
       maxWidth: 960
     }
-  },
+  }),
 
-  "@media (min-width: 1200)": {
+  ...(screenWidth >= 1200 && {
     container: {
       maxWidth: 1140
     }
-  },
+  }),
 
   row: {
     display: "flex",
@@ -566,7 +568,7 @@ const styles = EStyleSheet.create({
     marginLeft: "91.666667%"
   },
 
-  "@media (min-width: 576)": {
+  ...(screenWidth >= 576 && {
     col_sm: {
       flexBasis: 0,
       flexGrow: 1,
@@ -663,9 +665,9 @@ const styles = EStyleSheet.create({
     offset_sm_11: {
       marginLeft: "91.666667%"
     }
-  },
+  }),
 
-  "@media (min-width: 768)": {
+  ...(screenWidth >= 768 && {
     col_md: {
       flexBasis: 0,
       flexGrow: 1,
@@ -760,9 +762,9 @@ const styles = EStyleSheet.create({
     offset_md_11: {
       marginLeft: "91.666667%"
     }
-  },
+  }),
 
-  "@media (min-width: 992)": {
+  ...(screenWidth >= 992 && {
     col_lg: {
       flexBasis: 0,
       flexGrow: 1,
@@ -857,9 +859,9 @@ const styles = EStyleSheet.create({
     offset_lg_11: {
       marginLeft: "91.666667%"
     }
-  },
+  }),
 
-  "@media (min-width: 1200)": {
+  ...(screenWidth >= 1200 && {
     col_xl: {
       flexBasis: 0,
       flexGrow: 1,
@@ -954,7 +956,7 @@ const styles = EStyleSheet.create({
     offset_xl_11: {
       marginLeft: "91.666667%"
     }
-  },
+  }),
 
   flex_row: {
     flexDirection: "row"
@@ -1092,7 +1094,7 @@ const styles = EStyleSheet.create({
     alignSelf: "stretch"
   },
 
-  "@media (min-width: 576)": {
+  ...(screenWidth >= 576 && {
     flex_sm_row: {
       flexDirection: "row"
     },
@@ -1195,9 +1197,9 @@ const styles = EStyleSheet.create({
     align_self_sm_stretch: {
       alignSelf: "stretch"
     }
-  },
+  }),
 
-  "@media (min-width: 768)": {
+  ...(screenWidth >= 768 && {
     flex_md_row: {
       flexDirection: "row"
     },
@@ -1300,9 +1302,9 @@ const styles = EStyleSheet.create({
     align_self_md_stretch: {
       alignSelf: "stretch"
     }
-  },
+  }),
 
-  "@media (min-width: 992)": {
+  ...(screenWidth >= 992 && {
     flex_lg_row: {
       flexDirection: "row"
     },
@@ -1405,9 +1407,9 @@ const styles = EStyleSheet.create({
     align_self_lg_stretch: {
       alignSelf: "stretch"
     }
-  },
+  }),
 
-  "@media (min-width: 1200)": {
+  ...(screenWidth >= 1200 && {
     flex_xl_row: {
       flexDirection: "row"
     },
@@ -1510,7 +1512,7 @@ const styles = EStyleSheet.create({
     align_self_xl_stretch: {
       alignSelf: "stretch"
     }
-  }
+  })
 });
 
 export default styles;

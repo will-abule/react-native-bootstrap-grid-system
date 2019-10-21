@@ -1,6 +1,6 @@
 {
   "name": "react-native-bootstrap-grid-system",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "",
   "main": "bootstrap-grid.js",
   "scripts": {
@@ -35,7 +35,5 @@
     "url": "https://github.com/willxd42/react-native-bootstrap-grid-system/issues"
   },
   "homepage": "https://github.com/willxd42/react-native-bootstrap-grid-system#readme",
-  "dependencies": {
-    "react-native-extended-stylesheet": "0.12.0"
-  }
+  "dependencies": {}
 }
